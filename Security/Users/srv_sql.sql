@@ -1,0 +1,2 @@
+CREATE USER [srv_sql] WITHOUT LOGIN
+GO

@@ -1,0 +1,12 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [dbo].[usp_NextSysDocId](@SysDocId INT)
+
+AS
+
+UPDATE dbo.ARNEXTSY_local
+SET NextSysDocID = @SysDocId
+
+GO

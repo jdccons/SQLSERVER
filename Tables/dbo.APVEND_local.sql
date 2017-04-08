@@ -1,0 +1,52 @@
+CREATE TABLE [dbo].[APVEND_local]
+(
+[VendorKey] [nvarchar] (12) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[VendorName] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorAddress1] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorAddress2] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorAddress3] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorCity] [nvarchar] (15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorState] [nvarchar] (2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorZipCode] [nvarchar] (9) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorCountry] [nvarchar] (3) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[AttnName] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[AttnPhone] [nvarchar] (14) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ContactName] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ContactPhone] [nvarchar] (14) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TaxID] [nvarchar] (15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TelexNumber] [nvarchar] (15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FaxNumber] [nvarchar] (15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SupplierNumber] [nvarchar] (15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CustomerKey] [nvarchar] (12) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[AlternateVendorKey] [nvarchar] (12) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CreditLimitAmt] [float] NULL,
+[Print1099] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ExpenseAcctKey] [nvarchar] (32) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TermsKey] [nvarchar] (4) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FobKey] [nvarchar] (4) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ShipViaKey] [nvarchar] (4) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VendorClassKey] [nvarchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LocationKey] [nvarchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[BranchKey] [nvarchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CommentKey] [nvarchar] (2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Retention] [nvarchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PaymentHold] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ResponsibilityKey] [nvarchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DefaultBox1099] [nvarchar] (2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[RsrvExpAct] [nvarchar] (32) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DefaultPCReference] [nvarchar] (20) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TaxKey] [nvarchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[RsrvPrcIncTx] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[EmailAddress] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[WebPageURL] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[OneVchrPerChk] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Spare] [nvarchar] (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[RecUserID] [nvarchar] (8) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[RecDate] [datetime] NULL,
+[RecTime] [nvarchar] (8) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[APVEND_local] ADD CONSTRAINT [PK_APVEND_local] PRIMARY KEY CLUSTERED  ([VendorKey]) ON [PRIMARY]
+GO
+EXEC sp_addextendedproperty N'MS_Description', 'Accounting table for vendors.', 'SCHEMA', N'dbo', 'TABLE', N'APVEND_local', NULL, NULL
+GO

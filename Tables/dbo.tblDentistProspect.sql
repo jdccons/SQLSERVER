@@ -1,0 +1,52 @@
+CREATE TABLE [dbo].[tblDentistProspect]
+(
+[DentKeyID] [int] NOT NULL IDENTITY(1, 1),
+[ProvRelsRepID] [int] NULL,
+[DentFirst] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentMiddleInit] [nvarchar] (2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentLast] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentStreet1] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentStreet2] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentCity] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[DentState] [nvarchar] (2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentZip] [nvarchar] (9) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentAttn] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentPhoneHome] [nvarchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentPhoneOffice] [nvarchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentFax] [nvarchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Dent_LUName] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentClass] [nvarchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentSpecialty] [nvarchar] (20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[DentAffilDate] [datetime] NULL,
+[DentGradYr] [float] NULL,
+[DentSchool] [nvarchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentLicense] [nvarchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentStatus] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentComments] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentGeoID] [nvarchar] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentContStart] [datetime] NULL,
+[DentContEnd] [datetime] NULL,
+[DentInaDte] [datetime] NULL,
+[DentAgree] [bit] NOT NULL,
+[DentStCert] [bit] NOT NULL,
+[DentIns] [bit] NOT NULL,
+[DentSubCert] [bit] NOT NULL,
+[DentCloseMyOff] [bit] NOT NULL,
+[DentSpecialPrice] [bit] NULL,
+[DentBilingual] [bit] NULL,
+[DentWebsite] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentSelect] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DentLastMailing] [datetime] NULL,
+[DentMail] [bit] NOT NULL,
+[DentRefer] [bit] NOT NULL,
+[upsize_ts] [binary] (8) NULL,
+[TimeStmp] [timestamp] NULL,
+[RTNCODE] [char] (3) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LATITUDE] [int] NULL,
+[LONGITUDE] [int] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[tblDentistProspect] ADD CONSTRAINT [PK_tblDentistProspect] PRIMARY KEY CLUSTERED  ([DentKeyID]) ON [PRIMARY]
+GO
+EXEC sp_addextendedproperty N'MS_Description', 'Information about prospective dentists.', 'SCHEMA', N'dbo', 'TABLE', N'tblDentistProspect', NULL, NULL
+GO

@@ -1,0 +1,14 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+
+
+
+CREATE VIEW [dbo].[vwGrpDepCnt]
+AS
+	SELECT DepSubID, ISNULL(COUNT(ID), 0) AS DepCnt
+	FROM dbo.vwAllGrpDependents
+	GROUP BY DepSubID;
+
+GO
