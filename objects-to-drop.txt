@@ -1,0 +1,21 @@
+access objects to drop
+	Reports
+		rptGrp_wLog
+		rptCommissionAgentMein
+		rptActivityLog
+		rptActivityLog_Sub
+		rptCardMemGrp_Bexar
+		rptGrpActivity_New
+		rptGrpSubscr_Bexar
+		rptGrpActivity_Appt
+		rptGrpActivity_Phone
+		rptImportResults
+		rsubGrpSubscr_Dep_Bexar
+		rsubImportChanged
+		rsubImportDeletions
+		rsubImportNew
+		rptImportExceptions
+		rptImportExceptionsDD
+		rsubImportPlanErrors
+		rsubImportPriceErrors
+
