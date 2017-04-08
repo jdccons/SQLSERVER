@@ -5,9 +5,27 @@ GO
 
 
 
+
 CREATE VIEW [dbo].[vw_Commission_Individual]
- 
+WITH SCHEMABINDING
 AS
+/* =======================================================================
+	Object:			vw_Commission_Individual
+	Version:		2
+	Author:			John Criswell
+	Create date:	2015-01-09 
+	Description:	Lists payment transactions in ARTRANH_local. for
+					Individuals.			
+								
+							
+	Change Log:
+	-------------------------------------------------------------------------
+	Change Date		Version			Changed by		Reason
+	2015-01-09		1.0				JCriswell		Created
+	2015-01-16		2.0				JCriswell		Added schemabinding
+
+	
+========================================================================== */
 	/*  individual transactions  */ 
     SELECT  
 			ia.AgentId ,
@@ -41,6 +59,7 @@ AS
             AND art.CustomerClassKey = 'INDIV'
             AND ( ia.AgentId <> 'CORPT' )
             AND ( ia.AgentId <> 'CORP' );
+
 
 
 
